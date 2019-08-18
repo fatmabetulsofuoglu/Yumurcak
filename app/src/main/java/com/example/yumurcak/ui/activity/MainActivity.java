@@ -1,4 +1,4 @@
-package com.example.yumurcak;
+package com.example.yumurcak.ui.activity;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -11,8 +11,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.example.yumurcak.Fragment.Forum_Fragment;
 import com.example.yumurcak.R;
+import com.example.yumurcak.ui.fragment.Activity_Fragment;
+import com.example.yumurcak.ui.fragment.BlogFragment;
+import com.example.yumurcak.ui.fragment.ForumFragment;
+import com.example.yumurcak.ui.fragment.NewPostFragment;
+import com.example.yumurcak.ui.fragment.NotificationsFragment;
+import com.example.yumurcak.ui.fragment.SaveEventFragment;
+import com.example.yumurcak.ui.fragment.SaveBlogFragment;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottom;
@@ -47,17 +53,17 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if (id == R.id.navSavesActivity) {
-                    fragment = new SaveActivities_Fragment();
+                    fragment = new SaveEventFragment();
                     LoadFragment(fragment);
                 }
 
                 else if (id == R.id.navSavesBlogs) {
-                    fragment = new SaveBlogs_Fragment();
+                    fragment = new SaveBlogFragment();
                     LoadFragment(fragment);
                 }
 
                 else if (id == R.id.navForum) {
-                    fragment = new Forum_Fragment();
+                    fragment = new ForumFragment();
                     LoadFragment(fragment);
                 }
 
@@ -75,19 +81,19 @@ public class MainActivity extends AppCompatActivity {
 
                 else if(menuItem.getItemId()==R.id.blog){
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame_layout, new Blog_Fragment());
+                    transaction.replace(R.id.frame_layout, new BlogFragment());
                     transaction.commit();
                 }
 
                 else if(menuItem.getItemId()==R.id.add){
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame_layout, new NewPost_Fragment());
+                    transaction.replace(R.id.frame_layout, new NewPostFragment());
                     transaction.commit();
                 }
 
                 else if(menuItem.getItemId()==R.id.notifications){
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame_layout, new Notifications_Fragment());
+                    transaction.replace(R.id.frame_layout, new NotificationsFragment());
                     transaction.commit();
                 }
                 return true;

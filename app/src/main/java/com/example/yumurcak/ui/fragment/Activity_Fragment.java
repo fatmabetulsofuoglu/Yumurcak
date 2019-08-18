@@ -1,4 +1,4 @@
-package com.example.yumurcak;
+package com.example.yumurcak.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
