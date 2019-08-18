@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/activity"
+        android:title="Etkinlik"
+        android:icon="@drawable/activity">
+    </item>
+
+    <item android:id="@+id/blog"
+        android:title="Yazı"
+        android:icon="@drawable/blog">
+    </item>
+
+    <item android:id="@+id/add"
+        android:title="Yeni"
+        android:icon="@drawable/add">
+    </item>
+
+    <item android:id="@+id/notifications"
+        android:title="Bildirim"
+        android:icon="@drawable/notifications">
+    </item>
+
+    <item android:id="@+id/profile"
+        android:title="Profil"
+        android:icon="@drawable/user">
+    </item>
+</menu>
