@@ -1,5 +1,4 @@
 {
-  
   "project_info": {
     "project_number": "949921618398",
     "firebase_url": "https://yumurcak-8f684.firebaseio.com",
@@ -7,43 +6,6 @@
     "storage_bucket": "yumurcak-8f684.appspot.com"
   },
   "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:949921618398:android:9db7d79090c49373",
-        "android_client_info": {
-          "package_name": "com.example.gezginap"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "949921618398-rv0fu35erefh1hgfom007s5uvb152l00.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.gezginap",
-            "certificate_hash": "9e1744653089da6cfe35766aab9b6ea3a3b21076"
-          }
-        },
-        {
-          "client_id": "949921618398-3sqrgeve89s3cvg734vo46ug3n3cpikm.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD1iZAdrf9U1RCRZ636Izb_ch1TQPwRW88"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "949921618398-3sqrgeve89s3cvg734vo46ug3n3cpikm.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
     {
       "client_info": {
         "mobilesdk_app_id": "1:949921618398:android:1d0485b6c9ddbb3b",
