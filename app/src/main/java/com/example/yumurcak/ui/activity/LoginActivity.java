@@ -54,6 +54,8 @@ public class LoginActivity extends AppCompatActivity {
     private void login(){
         String email=email_et.getText().toString().trim();
         String password=password_et.getText().toString().trim();
+        //TODO: Burda email ve şifreyi kontrol et boş mu diye boş değilse alttakini çalıştır
+//else düştü emülatörde bazen çalıştırmıyodu ama bakalım bi dakka kayıt olmadı ki nasıl login olsun :D :D
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
