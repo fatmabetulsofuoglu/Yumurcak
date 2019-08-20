@@ -12,8 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.yumurcak.R;
-import com.example.yumurcak.ui.fragment.Activity_Fragment;
 import com.example.yumurcak.ui.fragment.BlogFragment;
+import com.example.yumurcak.ui.fragment.EventFragment;
 import com.example.yumurcak.ui.fragment.ForumFragment;
 import com.example.yumurcak.ui.fragment.NewPostFragment;
 import com.example.yumurcak.ui.fragment.NotificationsFragment;
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if(menuItem.getItemId()==R.id.activity){
-                    fragment = new Activity_Fragment();
+                    fragment = new EventFragment();
                     LoadFragment(fragment);
                 }
 
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void LoadFragment(Fragment fragment){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout, new Activity_Fragment());
+        transaction.replace(R.id.frame_layout, new EventFragment());
         transaction.commit();
     }
 }

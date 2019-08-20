@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/holo_blue_light"
+    android:background="@android:color/holo_orange_light"
     android:orientation="vertical">
 
     <ImageView
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
-        app:srcCompat="@drawable/nav_profile_picture" />
+        app:srcCompat="@drawable/user_icon1" />
 
     <TextView
         android:id="@+id/kullaniciAdiTV"

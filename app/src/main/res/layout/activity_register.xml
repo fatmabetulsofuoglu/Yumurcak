@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_backgroundcute"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/yumurcaklogo"
+            android:layout_marginLeft="50dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+
+        <ImageButton
+            android:id="@+id/profile_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/user_icon1" />
+
+
+        <EditText
+            android:id="@+id/name_et"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:color/white"
+            android:hint="Ad"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#fd7953"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/surname_et"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:hint="Soyad"
+            android:layout_margin="8dp"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#fd7953"
+            android:textColorHint="@android:color/darker_gray" />
+
+
+        <RadioGroup
+            android:id="@+id/radioMotherFather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioMother"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anne"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioFather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baba"
+                android:checked="true"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/user_email_register_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:hint="Email Adresiniz"
+            android:layout_margin="8dp"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#fd7953"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/username_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_margin="8dp"
+            android:hint="Kullanıcı Adı"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#fd7953"
+            android:textColorHint="@android:color/darker_gray" />
+
+
+        <EditText
+            android:id="@+id/user_password_register_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_email_register_et"
+            android:layout_margin="8dp"
+            android:background="@android:color/white"
+            android:hint="Parola"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#fd7953"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/user_confirm_email_register_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_password_register_et"
+            android:layout_margin="8dp"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:hint="Parola Onay"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#fd7953"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_confirm_email_register_tv"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/holo_orange_dark"
+            android:padding="16dp"
+            android:text=" Kayıt Ol "
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

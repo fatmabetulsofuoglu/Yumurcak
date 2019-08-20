@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.yumurcak.R;
 
-public class Activity_Fragment extends Fragment {
+public class EventFragment extends Fragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
