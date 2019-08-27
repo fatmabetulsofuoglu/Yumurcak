@@ -1,6 +1,9 @@
 package com.example.yumurcak.ui.activity;
+
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.BottomSheetDialog;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -10,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.yumurcak.R;
 import com.example.yumurcak.ui.fragment.BlogFragment;
@@ -26,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     Toolbar toolbar;
     DrawerLayout drawerLayout;
+    FloatingActionButton fabAdd;
 
 
     @Override
@@ -35,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         bottom = findViewById(R.id.bottom);
-
+        fabAdd = findViewById(R.id.fabAdd);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
         drawerLayout = findViewById(R.id.drawerLayout);
@@ -43,8 +48,16 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
+        fabAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View view = getLayoutInflater().inflate(R.layout.fragment_bottom_sheet_add, null);
+                BottomSheetDialog dialog = new BottomSheetDialog(MainActivity.this);
+                dialog.setContentView(view);
+                dialog.show();
+            }
+        });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-
 
 
             @Override
@@ -55,14 +68,10 @@ public class MainActivity extends AppCompatActivity {
                 if (id == R.id.navSavesActivity) {
                     fragment = new SaveEventFragment();
                     LoadFragment(fragment);
-                }
-
-                else if (id == R.id.navSavesBlogs) {
+                } else if (id == R.id.navSavesBlogs) {
                     fragment = new SaveBlogFragment();
                     LoadFragment(fragment);
-                }
-
-                else if (id == R.id.navForum) {
+                } else if (id == R.id.navForum) {
                     fragment = new ForumFragment();
                     LoadFragment(fragment);
                 }
@@ -74,24 +83,18 @@ public class MainActivity extends AppCompatActivity {
         bottom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                if(menuItem.getItemId()==R.id.activity){
+                if (menuItem.getItemId() == R.id.activity) {
                     fragment = new EventFragment();
                     LoadFragment(fragment);
-                }
-
-                else if(menuItem.getItemId()==R.id.blog){
+                } else if (menuItem.getItemId() == R.id.blog) {
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                     transaction.replace(R.id.frame_layout, new BlogFragment());
                     transaction.commit();
-                }
-
-                else if(menuItem.getItemId()==R.id.add){
+                } else if (menuItem.getItemId() == R.id.add) {
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                     transaction.replace(R.id.frame_layout, new NewPostFragment());
                     transaction.commit();
-                }
-
-                else if(menuItem.getItemId()==R.id.notifications){
+                } else if (menuItem.getItemId() == R.id.notifications) {
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                     transaction.replace(R.id.frame_layout, new NotificationsFragment());
                     transaction.commit();
@@ -100,7 +103,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void LoadFragment(Fragment fragment){
+
+    private void LoadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, new EventFragment());
         transaction.commit();
