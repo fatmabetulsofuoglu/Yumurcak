@@ -1,18 +1,24 @@
 package com.example.yumurcak.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.yumurcak.R;
 
 public class BottomSheetAddFragment extends BottomSheetDialogFragment {
 
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
     }
 
     @Override
