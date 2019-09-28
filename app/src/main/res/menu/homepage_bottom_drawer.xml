@@ -3,26 +3,27 @@
 
     <item android:id="@+id/activity"
         android:title="Etkinlik"
-        android:icon="@drawable/activity">
+        android:icon="@drawable/ic_assignment"
+        >
     </item>
 
     <item android:id="@+id/blog"
         android:title="Yazı"
-        android:icon="@drawable/blog">
+        android:icon="@drawable/ic_assignment">
     </item>
 
     <item android:id="@+id/add"
         android:title="Yeni"
-        android:icon="@drawable/add">
+        android:icon="@drawable/ic_assignment">
     </item>
 
     <item android:id="@+id/notifications"
         android:title="Bildirim"
-        android:icon="@drawable/notifications">
+        android:icon="@drawable/ic_assignment">
     </item>
 
     <item android:id="@+id/profile"
         android:title="Profil"
-        android:icon="@drawable/user">
+        android:icon="@drawable/ic_assignment">
     </item>
 </menu>

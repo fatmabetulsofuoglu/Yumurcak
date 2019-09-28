@@ -22,7 +22,6 @@ public class EventFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        return null;
+        return inflater.inflate(R.layout.fragment_event, container, false);
     }
 }

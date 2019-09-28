@@ -17,6 +17,7 @@ import android.view.View;
 
 import com.example.yumurcak.R;
 import com.example.yumurcak.ui.fragment.BlogFragment;
+import com.example.yumurcak.ui.fragment.BottomSheetAddFragment;
 import com.example.yumurcak.ui.fragment.EventFragment;
 import com.example.yumurcak.ui.fragment.ForumFragment;
 import com.example.yumurcak.ui.fragment.NewPostFragment;
@@ -51,30 +52,22 @@ public class MainActivity extends AppCompatActivity {
         fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View view = getLayoutInflater().inflate(R.layout.fragment_bottom_sheet_add, null);
-                BottomSheetDialog dialog = new BottomSheetDialog(MainActivity.this);
-                dialog.setContentView(view);
-                dialog.show();
+                BottomSheetAddFragment dialog = new BottomSheetAddFragment();
+                dialog.show(getSupportFragmentManager(),"BottomSheetAddFragment");
             }
         });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-
-
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 int id = menuItem.getItemId();
-
-
                 if (id == R.id.navSavesActivity) {
                     fragment = new SaveEventFragment();
-                    LoadFragment(fragment);
                 } else if (id == R.id.navSavesBlogs) {
                     fragment = new SaveBlogFragment();
-                    LoadFragment(fragment);
                 } else if (id == R.id.navForum) {
                     fragment = new ForumFragment();
-                    LoadFragment(fragment);
                 }
+                LoadFragment(fragment);
 
                 return false;
             }
@@ -85,20 +78,14 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.activity) {
                     fragment = new EventFragment();
-                    LoadFragment(fragment);
                 } else if (menuItem.getItemId() == R.id.blog) {
-                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame_layout, new BlogFragment());
-                    transaction.commit();
+                    fragment= new BlogFragment();
                 } else if (menuItem.getItemId() == R.id.add) {
-                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame_layout, new NewPostFragment());
-                    transaction.commit();
+                    fragment= new NewPostFragment();
                 } else if (menuItem.getItemId() == R.id.notifications) {
-                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame_layout, new NotificationsFragment());
-                    transaction.commit();
+                    fragment= new NotificationsFragment();
                 }
+                LoadFragment(fragment);
                 return true;
             }
         });
@@ -106,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void LoadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout, new EventFragment());
+        transaction.add(R.id.frame_layout, fragment);
         transaction.commit();
     }
 }
