@@ -1,0 +1,18 @@
+<vector android:height="24dp" android:viewportHeight="64"
+    android:viewportWidth="64" android:width="24dp"
+    xmlns:aapt="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:pathData="m48,20h-40a2,2 0,0 0,-2 2v28a2,2 0,0 0,2 2h40a2,2 0,0 0,2 -2v-28a2,2 0,0 0,-2 -2zM48,22v20.587l-11.293,-11.294a1,1 0,0 0,-1.414 0l-11.293,11.293 -7.293,-7.293a1,1 0,0 0,-1.414 0l-7.293,7.293v-20.586zM40.086,37.5 L38,39.586 36.707,38.293a1,1 0,0 0,-1.414 0l-1.293,1.293 -2.086,-2.086 4.086,-4.086zM19.586,41 L18,42.586 16.707,41.293a1,1 0,0 0,-1.414 0l-1.293,1.293 -1.586,-1.586 3.586,-3.586zM8,45.414 L11,42.414 13.293,44.707a1,1 0,0 0,1.414 0l1.293,-1.293 1.293,1.293a1,1 0,0 0,1.414 0l2.293,-2.293 7.586,7.586h-20.586zM31.414,50 L25.414,44 30.5,38.914 33.293,41.707a1,1 0,0 0,1.414 0l1.293,-1.293 1.293,1.293a1,1 0,0 0,1.414 0l2.793,-2.793 6.5,6.5v4.586z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:endX="28" android:endY="7.373"
+                android:startX="28" android:startY="57.694" android:type="linear">
+                <item android:color="#FFE93E3A" android:offset="0"/>
+                <item android:color="#FFED683C" android:offset="0.35"/>
+                <item android:color="#FFF3903F" android:offset="0.7"/>
+                <item android:color="#FFFDC70C" android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="m59,8h-46a3,3 0,0 0,-3 3v5h-5a3,3 0,0 0,-3 3v34a3,3 0,0 0,3 3h46a3,3 0,0 0,3 -3v-5h5a3,3 0,0 0,3 -3v-34a3,3 0,0 0,-3 -3zM52,53a1,1 0,0 1,-1 1h-46a1,1 0,0 1,-1 -1v-34a1,1 0,0 1,1 -1h46a1,1 0,0 1,1 1zM51,16h-35v-2h40v28h-2v-23a3,3 0,0 0,-3 -3zM60,45a1,1 0,0 1,-1 1h-5v-2h2a2,2 0,0 0,2 -2v-28a2,2 0,0 0,-2 -2h-40a2,2 0,0 0,-2 2v2h-2v-5a1,1 0,0 1,1 -1h46a1,1 0,0 1,1 1z"/>
+    <path android:pathData="m19,33h5a3,3 0,0 0,0.871 -5.871,3 3,0 0,0 -5.7,-0.129h-0.171a3,3 0,0 0,0 6zM19,29h1a1,1 0,0 0,1 -1,1 1,0 0,1 2,0 1,1 0,0 0,1 1,1 1,0 0,1 0,2h-5a1,1 0,0 1,0 -2z"/>
+    <path android:pathData="m41,30a3,3 0,1 0,-3 -3,3 3,0 0,0 3,3zM41,26a1,1 0,1 1,-1 1,1 1,0 0,1 1,-1z"/>
+</vector>
