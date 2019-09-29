@@ -1,6 +1,8 @@
 package com.example.yumurcak.ui.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -9,43 +11,50 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yumurcak.R;
+import com.example.yumurcak.data.model.Event;
 import com.example.yumurcak.ui.fragment.NotificationsFragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class NotificationAdapter extends BaseAdapter {
+public class NotificationAdapter  extends RecyclerView.Adapter<NotificationAdapter.MyViewHolder> {
 
+    private List<Event> eventList;
 
-    ArrayList<NotificationsFragment> notificateList;
-    Context context;
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        public TextView title, year, genre;
 
-    public NotificationAdapter ( ArrayList<NotificationsFragment> notificateList, Context context){
-        this.notificateList = notificateList;
-        this.context= context;
-    }
-    @Override
-    public int getCount() { return notificateList.size ();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return notificateList.get(position);
+        public MyViewHolder(View view) {
+            super(view);
+            title = (TextView) view.findViewById(R.id.title);
+            genre = (TextView) view.findViewById(R.id.title);
+            year = (TextView) view.findViewById(R.id.title);
+        }
     }
 
-    @Override
-    public long getItemId(int position) {
-        return position;
+
+    public NotificationAdapter(List<Event> eventList) {
+        this.eventList = eventList;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View v = View.inflate(context, R.layout.design_notification_design, null);
-        ImageView imgUserPhtNt=
-                (ImageView) v.findViewById(R.id.user_photo_notificate);
-        TextView txtNotificate=
-                (TextView) v.findViewById(R.id.txt_notification);
-        imgUserPhtNt.setImageResource(notificateList.get(position).userPhotoNotificate);
-        txtNotificate.setText(notificateList.get(position).textNotification);
-        return v;
+    public NotificationAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.fragment_blog, parent, false);
+
+        return new NotificationAdapter.MyViewHolder(itemView);
+    }
+
+    @Override
+    public void onBindViewHolder(NotificationAdapter.MyViewHolder holder, int position) {
+        Event event = eventList.get(position);
+        /*holder.title.setText(event);
+        holder.genre.setText(event.getGenre());
+        holder.year.setText(event.getYear());*/
+    }
+
+    @Override
+    public int getItemCount() {
+        return eventList.size();
     }
 }

@@ -1,6 +1,8 @@
 package com.example.yumurcak.ui.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -9,52 +11,49 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yumurcak.R;
+import com.example.yumurcak.data.model.Event;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class BlogAdapter {
-    public class EventAdapter extends BaseAdapter {
-        ArrayList<blog_list> blogList;
-        Context context;
+public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.MyViewHolder> {
 
-        public EventAdapter ( ArrayList<blog_list> eventList, Context context){
-            this.blogList = eventList;
-            this.context= context;
-        }
-        @Override
-        public int getCount() { return blogList.size ();
-        }
+    private List<Event> eventList;
 
-        @Override
-        public Object getItem(int position) {
-            return blogList.get(position);
-        }
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        public TextView title, year, genre;
 
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            View v = View.inflate(context, R.layout.design_blog_design, null);
-            ImageView imgUserPhtEvnt=
-                    (ImageView) v.findViewById(R.id.user_photo_blog);
-            Button btnUserTxt=
-                    (Button) v.findViewById(R.id.user_btn_blog);
-            TextView txtUsertxt=
-                    (TextView) v.findViewById(R.id.user_txt_blog);
-            TextView txtTitle=
-                    (TextView) v.findViewById(R.id.title_txt_blog);
-            TextView txtindex=
-                    (TextView) v.findViewById(R.id.index_txt_blog);
-            imgUserPhtEvnt.setImageResource(blogList.get(position).userPhotoBlog);
-            btnUserTxt.setOnClickListener(blogList.get(position).userButtonBlog);
-            txtUsertxt.setText(blogList.get(position).userTextBlog);
-            txtTitle.setText(blogList.get(position).TitleBlog);
-            txtindex.setText(blogList.get(position).IndexBlog);
-            return v;
+        public MyViewHolder(View view) {
+            super(view);
+            title = (TextView) view.findViewById(R.id.title);
+            genre = (TextView) view.findViewById(R.id.title);
+            year = (TextView) view.findViewById(R.id.title);
         }
     }
 
+
+    public BlogAdapter(List<Event> eventList) {
+        this.eventList = eventList;
+    }
+
+    @Override
+    public BlogAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.fragment_blog, parent, false);
+
+        return new BlogAdapter.MyViewHolder(itemView);
+    }
+
+    @Override
+    public void onBindViewHolder(BlogAdapter.MyViewHolder holder, int position) {
+        Event event = eventList.get(position);
+        /*holder.title.setText(event);
+        holder.genre.setText(event.getGenre());
+        holder.year.setText(event.getYear());*/
+    }
+
+    @Override
+    public int getItemCount() {
+        return eventList.size();
+    }
 }
