@@ -1,25 +1,13 @@
 package com.example.yumurcak.ui.fragment;
-
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.example.yumurcak.R;
 
 public class NotificationsFragment extends Fragment {
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+    int userPhotoNotificate;
+    String textNotification;
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_notifications, container, false);
+    public NotificationsFragment (int userPhotoNotificate, String textNotification){
+        this.userPhotoNotificate= userPhotoNotificate;
+        this.textNotification= textNotification;
     }
 }

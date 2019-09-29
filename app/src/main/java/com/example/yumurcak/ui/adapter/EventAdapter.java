@@ -1,7 +1,6 @@
 package com.example.yumurcak.ui.adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -10,14 +9,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yumurcak.R;
+import com.example.yumurcak.ui.fragment.EventFragment;
 
 import java.util.ArrayList;
 
 public class EventAdapter extends BaseAdapter {
-   ArrayList<evnt_list> eventList;
+   ArrayList<EventFragment> eventList;
     Context context;
 
-    public EventAdapter ( ArrayList<evnt_list> eventList, Context context){
+    public EventAdapter (ArrayList<EventFragment> eventList, Context context){
       this.eventList = eventList;
       this.context= context;
     }
@@ -51,7 +51,7 @@ public class EventAdapter extends BaseAdapter {
         ImageView imageIndex2=
                 (ImageView) v.findViewById(R.id.index_image2_event);
         imgUserPhtEvnt.setImageResource(eventList.get(position).userPhotoEvent);
-        btnUserTxt.setOnClickListener(eventList.get(position).userTextEvent);
+        btnUserTxt.setOnClickListener(eventList.get(position).userButtonEvent);
         txtUsertxt.setText(eventList.get(position).userTextEvent);
         txtTitle.setText(eventList.get(position).TitleEvent);
         imageIndex.setImageResource(eventList.get(position).indexEvent);

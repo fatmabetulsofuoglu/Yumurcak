@@ -48,11 +48,11 @@ public class BlogAdapter {
                     (TextView) v.findViewById(R.id.title_txt_blog);
             TextView txtindex=
                     (TextView) v.findViewById(R.id.index_txt_blog);
-            imgUserPhtEvnt.setImageResource(blogList.get(position).userPhotoEvent);
-            btnUserTxt.setOnClickListener(blogList.get(position).userTextEvent);
-            txtUsertxt.setText(blogList.get(position).userTextEvent);
-            txtTitle.setText(blogList.get(position).TitleEvent);
-            txtindex.setText(blogList.get(position).IndexEvent);
+            imgUserPhtEvnt.setImageResource(blogList.get(position).userPhotoBlog);
+            btnUserTxt.setOnClickListener(blogList.get(position).userButtonBlog);
+            txtUsertxt.setText(blogList.get(position).userTextBlog);
+            txtTitle.setText(blogList.get(position).TitleBlog);
+            txtindex.setText(blogList.get(position).IndexBlog);
             return v;
         }
     }

@@ -1,27 +1,23 @@
 package com.example.yumurcak.ui.fragment;
 
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.example.yumurcak.R;
 
 public class EventFragment extends Fragment {
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+int userPhotoEvent;
+String userTextEvent;
+int userButtonEvent;
+String TitleEvent;
+int indexEvent;
+int indexEvent2;
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_event, container, false);
-    }
+public EventFragment(int userPhotoEvent, int userButtonEvent, String userTextEvent, String TitleEvent, int indexEvent, int indexEvent2) {
+
+    this.userButtonEvent = userButtonEvent;
+    this.userPhotoEvent = userPhotoEvent;
+    this.userTextEvent = userTextEvent;
+    this.TitleEvent = TitleEvent;
+    this.indexEvent = indexEvent;
+    this.indexEvent2 = indexEvent2;
+   }
 }

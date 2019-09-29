@@ -9,17 +9,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yumurcak.R;
+import com.example.yumurcak.ui.fragment.NotificationsFragment;
 
 import java.util.ArrayList;
 
 public class NotificationAdapter extends BaseAdapter {
 
 
-    ArrayList<notificate_list> notificateList;
+    ArrayList<NotificationsFragment> notificateList;
     Context context;
 
-    public NotificationAdapter ( ArrayList<notificate_list> eventList, Context context){
-        this.notificateList = eventList;
+    public NotificationAdapter ( ArrayList<NotificationsFragment> notificateList, Context context){
+        this.notificateList = notificateList;
         this.context= context;
     }
     @Override

@@ -22,4 +22,22 @@ public class BlogFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_blog, container, false);
     }
+
+int userPhotoBlog;
+    int userButtonBlog;
+    String userTextBlog;
+    String TitleBlog;
+    String IndexBlog;
+
+    public BlogFragment ( int userPhotoBlog ,int userButtonBlog, String userTextBlog, String TitleBlog, String IndexBlog){
+
+
+        this.userPhotoBlog=userPhotoBlog;
+        this.userButtonBlog= userButtonBlog;
+        this.userTextBlog= userTextBlog;
+        this.TitleBlog=TitleBlog;
+        this.IndexBlog=IndexBlog;
+    }
+
+
 }
