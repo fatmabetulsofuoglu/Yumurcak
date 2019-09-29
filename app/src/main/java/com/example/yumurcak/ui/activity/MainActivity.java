@@ -3,6 +3,7 @@ package com.example.yumurcak.ui.activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,17 +37,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         bottom = findViewById(R.id.bottom);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
         drawerLayout = findViewById(R.id.drawerLayout);
-
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
 
+        fragment = new EventFragment();
+        LoadFragment(fragment);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -70,17 +70,20 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.activity) {
                     fragment = new EventFragment();
+                    LoadFragment(fragment);
                 } else if (menuItem.getItemId() == R.id.blog) {
-                    fragment= new BlogFragment();
+                    fragment = new BlogFragment();
+                    LoadFragment(fragment);
                 } else if (menuItem.getItemId() == R.id.add) {
                     BottomSheetAddFragment dialog = new BottomSheetAddFragment();
-                    dialog.show(getSupportFragmentManager(),"BottomSheetAddFragment");
+                    dialog.show(getSupportFragmentManager(), "BottomSheetAddFragment");
                 } else if (menuItem.getItemId() == R.id.notifications) {
-                    fragment= new NotificationsFragment();
+                    fragment = new NotificationsFragment();
+                    LoadFragment(fragment);
                 } else if (menuItem.getItemId() == R.id.profile) {
-                    fragment= new ProfileFragment();
+                    fragment = new ProfileFragment();
+                    LoadFragment(fragment);
                 }
-                LoadFragment(fragment);
                 return true;
             }
         });
