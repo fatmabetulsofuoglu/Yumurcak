@@ -2,7 +2,9 @@ package com.example.yumurcak.data.api;
 
 import android.support.annotation.NonNull;
 
+import com.example.yumurcak.data.model.Blog;
 import com.example.yumurcak.data.model.Event;
+import com.example.yumurcak.data.model.Notification;
 import com.example.yumurcak.utils.IResponseListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -40,4 +42,39 @@ public class FirebaseService {
         });
     }
 
+    public void getBlogList(IResponseListener<List<Blog>> responseListener) {
+        List<Blog> blogList = new ArrayList<>();
+        db.collection("event").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                for (DocumentSnapshot document : task.getResult()) {
+                    blogList.add(document.toObject(Blog.class));
+                }
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                responseListener.OnError(e.getMessage());
+            }
+        });
+    }
+
+    public void getNotificationList(IResponseListener<List<Notification>> responseListener) {
+        List<Notification> notificationList = new ArrayList<>();
+        db.collection("event").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                for (DocumentSnapshot document : task.getResult()) {
+                    notificationList.add(document.toObject(Notification.class));
+                }
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                responseListener.OnError(e.getMessage());
+            }
+        });
+    }
 }

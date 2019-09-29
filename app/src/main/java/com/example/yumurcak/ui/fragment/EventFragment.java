@@ -14,7 +14,6 @@ import com.example.yumurcak.data.api.FirebaseService;
 import com.example.yumurcak.data.model.Event;
 import com.example.yumurcak.ui.adapter.EventAdapter;
 import com.example.yumurcak.utils.IResponseListener;
-
 import java.util.List;
 
 public class EventFragment extends Fragment {
