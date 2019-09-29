@@ -1,24 +1,17 @@
 package com.example.yumurcak.ui.adapter;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.yumurcak.R;
-import com.example.yumurcak.data.model.Event;
-
-import java.util.ArrayList;
+import com.example.yumurcak.data.model.Blog;
 import java.util.List;
 
 public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.MyViewHolder> {
 
-    private List<Event> eventList;
+    private List<Blog> blogList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, year, genre;
@@ -32,8 +25,8 @@ public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.MyViewHolder> 
     }
 
 
-    public BlogAdapter(List<Event> eventList) {
-        this.eventList = eventList;
+    public BlogAdapter(List<Blog> blogList) {
+        this.blogList = blogList;
     }
 
     @Override
@@ -46,7 +39,7 @@ public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(BlogAdapter.MyViewHolder holder, int position) {
-        Event event = eventList.get(position);
+        Blog blog = blogList.get(position);
         /*holder.title.setText(event);
         holder.genre.setText(event.getGenre());
         holder.year.setText(event.getYear());*/
@@ -54,6 +47,6 @@ public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.MyViewHolder> 
 
     @Override
     public int getItemCount() {
-        return eventList.size();
+        return blogList.size();
     }
 }
