@@ -4,10 +4,8 @@ import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,10 +24,6 @@ import com.example.yumurcak.R;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
-
-import java.io.File;
 
 public class EventShareFragment extends Fragment {
 
@@ -63,7 +57,7 @@ public class EventShareFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_event_share, container, false);
+        View view = inflater.inflate(R.layout.fragment_event_share, container, false);
         addCameraPhoto = view.findViewById(R.id.add_camera_photo);
         addGalleryPhoto = view.findViewById(R.id.add_gallery_photo);
         textTitleEvent = view.findViewById(R.id.txt_title_event);

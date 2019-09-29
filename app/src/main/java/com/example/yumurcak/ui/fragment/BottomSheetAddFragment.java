@@ -25,7 +25,7 @@ public class BottomSheetAddFragment extends BottomSheetDialogFragment {
             @Override
             public void onClick(View v) {
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.add(R.id.frame_layout, new EventShareFragment());
+                transaction.replace(R.id.frame_layout, new EventShareFragment());
                 transaction.addToBackStack("EventShareFragment").commit();
                 dismiss();
             }

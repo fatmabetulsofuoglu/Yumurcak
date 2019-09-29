@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     Toolbar toolbar;
     DrawerLayout drawerLayout;
-    FloatingActionButton fabAdd;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         bottom = findViewById(R.id.bottom);
-        fabAdd = findViewById(R.id.fabAdd);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
         drawerLayout = findViewById(R.id.drawerLayout);
@@ -49,13 +46,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
-        fabAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BottomSheetAddFragment dialog = new BottomSheetAddFragment();
-                dialog.show(getSupportFragmentManager(),"BottomSheetAddFragment");
-            }
-        });
+
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -81,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 } else if (menuItem.getItemId() == R.id.blog) {
                     fragment= new BlogFragment();
                 } else if (menuItem.getItemId() == R.id.add) {
-                    fragment= new NewPostFragment();
+                    BottomSheetAddFragment dialog = new BottomSheetAddFragment();
+                    dialog.show(getSupportFragmentManager(),"BottomSheetAddFragment");
                 } else if (menuItem.getItemId() == R.id.notifications) {
                     fragment= new NotificationsFragment();
                 } else if (menuItem.getItemId() == R.id.profile) {
