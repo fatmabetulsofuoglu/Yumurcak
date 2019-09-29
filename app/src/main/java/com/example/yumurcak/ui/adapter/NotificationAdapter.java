@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.yumurcak.R;
 import com.example.yumurcak.data.model.Event;
+import com.example.yumurcak.data.model.Notification;
 import com.example.yumurcak.ui.fragment.NotificationsFragment;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class NotificationAdapter  extends RecyclerView.Adapter<NotificationAdapter.MyViewHolder> {
 
-    private List<Event> eventList;
+    private List<Notification> notifications;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, year, genre;
@@ -33,8 +34,8 @@ public class NotificationAdapter  extends RecyclerView.Adapter<NotificationAdapt
     }
 
 
-    public NotificationAdapter(List<Event> eventList) {
-        this.eventList = eventList;
+    public NotificationAdapter(List<Notification> notifications) {
+        this.notifications = notifications;
     }
 
     @Override
@@ -47,7 +48,7 @@ public class NotificationAdapter  extends RecyclerView.Adapter<NotificationAdapt
 
     @Override
     public void onBindViewHolder(NotificationAdapter.MyViewHolder holder, int position) {
-        Event event = eventList.get(position);
+        Notification notification = notifications.get(position);
         /*holder.title.setText(event);
         holder.genre.setText(event.getGenre());
         holder.year.setText(event.getYear());*/
@@ -55,6 +56,6 @@ public class NotificationAdapter  extends RecyclerView.Adapter<NotificationAdapt
 
     @Override
     public int getItemCount() {
-        return eventList.size();
+        return notifications.size();
     }
 }
