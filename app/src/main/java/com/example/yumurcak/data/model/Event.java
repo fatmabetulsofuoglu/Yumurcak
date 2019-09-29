@@ -16,6 +16,8 @@ public class Event {
     private String doneActivities; // "Yaptım" etkinlik sayısı
     private String willDoneActivities;  // "Yapacağım" etkinlik sayısı
 
+    public Event(){
+    }
     public Event(String profilePhotoURL, String nameSurname, String userName, String eventTitle,
                  String eventContext, List<String> eventPhotosURL, Date createEventDate, List<Comment> comment,
                  String like, String doneActivities, String willDoneActivities) {

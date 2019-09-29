@@ -28,9 +28,10 @@ public class FirebaseService {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for (DocumentSnapshot document : task.getResult()) {
-                    events.add(document.toObject(Event.class));
+                    Event event=document.toObject(Event.class);
+                    events.add(event);
                 }
-
+                responseListener.OnResponse(events);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

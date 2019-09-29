@@ -8,6 +8,8 @@ public class Comment {
     private String commentContext;
     private Date createCommentDate;
 
+    public Comment(){
+    }
     public Comment(String userPhotoURL, String userName, String commentContext, Date createCommentDate) {
         this.userPhotoURL = userPhotoURL;
         this.userName = userName;
