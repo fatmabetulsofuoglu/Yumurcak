@@ -7,7 +7,7 @@
 
 
     <ImageButton
-        android:id="@+id/user_photo"
+        android:id="@+id/user_photo_blog"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -15,14 +15,14 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/user_txt"
+        app:layout_constraintEnd_toStartOf="@+id/user_txt_blog"
         app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user_icon" />
 
     <Button
-        android:id="@+id/user_btn"
+        android:id="@+id/user_btn_blog"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -31,13 +31,13 @@
         android:layout_marginRight="96dp"
         android:layout_marginBottom="8dp"
         android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/title_txt"
+        app:layout_constraintBottom_toTopOf="@+id/title_txt_blog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toEndOf="@+id/user_photo" />
+        app:layout_constraintStart_toEndOf="@+id/user_photo_blog" />
 
     <TextView
-        android:id="@+id/user_txt"
+        android:id="@+id/user_txt_blog"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
@@ -45,13 +45,13 @@
         android:layout_marginRight="244dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/user_btn"
+        app:layout_constraintBottom_toTopOf="@+id/user_btn_blog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/title_txt"
+        android:id="@+id/title_txt_blog"
         android:layout_width="377dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -62,7 +62,7 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_photo" />
+        app:layout_constraintTop_toBottomOf="@+id/user_photo_blog" />
 
     <TextView
         android:id="@+id/index_txt_blog"
@@ -79,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_txt"
+        app:layout_constraintTop_toBottomOf="@+id/title_txt_blog"
         app:layout_constraintVertical_bias="0.0" />
 
 

@@ -7,20 +7,20 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/user_photo"
+        android:id="@+id/user_photo_event"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/user_txt"
+        app:layout_constraintEnd_toStartOf="@+id/user_txt_event"
         app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user_icon" />
 
     <Button
-        android:id="@+id/user_btn"
+        android:id="@+id/user_btn_event"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -29,26 +29,26 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
         android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/title_txt"
+        app:layout_constraintBottom_toTopOf="@+id/title_txt_event"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
-        app:layout_constraintStart_toEndOf="@+id/user_photo" />
+        app:layout_constraintStart_toEndOf="@+id/user_photo_event" />
 
     <TextView
-        android:id="@+id/user_txt"
+        android:id="@+id/user_txt_event"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="244dp"
         android:layout_marginRight="244dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/user_btn"
+        app:layout_constraintBottom_toTopOf="@+id/user_btn_event"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/title_txt"
+        android:id="@+id/title_txt_event"
         android:layout_width="377dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -57,13 +57,13 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/index_image2"
+        app:layout_constraintBottom_toTopOf="@+id/index_image2_event"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/index_image2"
+        android:id="@+id/index_image2_event"
         android:layout_width="190dp"
         android:layout_height="190dp"
         android:layout_marginStart="8dp"
@@ -71,12 +71,12 @@
 
         android:layout_marginBottom="396dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/index_image"
+        app:layout_constraintEnd_toStartOf="@+id/index_image_event"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
     <ImageView
-        android:id="@+id/index_image"
+        android:id="@+id/index_image_event"
         android:layout_width="190dp"
         android:layout_height="190dp"
         android:layout_marginTop="8dp"
