@@ -18,6 +18,7 @@ import com.example.yumurcak.ui.fragment.EventFragment;
 import com.example.yumurcak.ui.fragment.ForumFragment;
 import com.example.yumurcak.ui.fragment.NewPostFragment;
 import com.example.yumurcak.ui.fragment.NotificationsFragment;
+import com.example.yumurcak.ui.fragment.ProfileFragment;
 import com.example.yumurcak.ui.fragment.SaveEventFragment;
 import com.example.yumurcak.ui.fragment.SaveBlogFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -83,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
                     fragment= new NewPostFragment();
                 } else if (menuItem.getItemId() == R.id.notifications) {
                     fragment= new NotificationsFragment();
+                } else if (menuItem.getItemId() == R.id.profile) {
+                    fragment= new ProfileFragment();
                 }
                 LoadFragment(fragment);
                 return true;
