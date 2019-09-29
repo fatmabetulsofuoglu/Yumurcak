@@ -7,7 +7,7 @@ public class Event {
     private String profilePhotoURL;
     private String nameSurname;
     private String userName;
-    private String eventTittle;
+    private String eventTitle;
     private String eventContext;
     private List<String> eventPhotosURL; //Etkinlik ile ilgili fotoğraflar
     private Date createEventDate;
@@ -16,13 +16,13 @@ public class Event {
     private String doneActivities; // "Yaptım" etkinlik sayısı
     private String willDoneActivities;  // "Yapacağım" etkinlik sayısı
 
-    public Event(String profilePhotoURL, String nameSurname, String userName, String eventTittle,
+    public Event(String profilePhotoURL, String nameSurname, String userName, String eventTitle,
                  String eventContext, List<String> eventPhotosURL, Date createEventDate, List<Comment> comment,
                  String like, String doneActivities, String willDoneActivities) {
         this.profilePhotoURL = profilePhotoURL;
         this.nameSurname = nameSurname;
         this.userName = userName;
-        this.eventTittle = eventTittle;
+        this.eventTitle = eventTitle;
         this.eventContext = eventContext;
         this.eventPhotosURL = eventPhotosURL;
         this.createEventDate = createEventDate;
@@ -88,12 +88,12 @@ public class Event {
         this.userName = userName;
     }
 
-    public String getEventTittle() {
-        return eventTittle;
+    public String getEventTitle() {
+        return eventTitle;
     }
 
-    public void setEventTittle(String eventTittle) {
-        this.eventTittle = eventTittle;
+    public void setEventTitle(String eventTitle) {
+        this.eventTitle = eventTitle;
     }
 
     public String getEventContext() {

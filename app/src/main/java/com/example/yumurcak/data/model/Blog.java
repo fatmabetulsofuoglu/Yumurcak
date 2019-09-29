@@ -4,14 +4,14 @@ public class Blog {
     private String profilePhotoURL;
     private String nameSurname;
     private String userName;
-    private String blogTittle;
+    private String blogTitle;
     private String blogContext;
 
-    public Blog(String profilePhotoURL, String nameSurname, String userName, String blogTittle, String blogContext) {
+    public Blog(String profilePhotoURL, String nameSurname, String userName, String blogTitle, String blogContext) {
         this.profilePhotoURL = profilePhotoURL;
         this.nameSurname = nameSurname;
         this.userName = userName;
-        this.blogTittle = blogTittle;
+        this.blogTitle = blogTitle;
         this.blogContext = blogContext;
     }
 
@@ -39,12 +39,12 @@ public class Blog {
         this.userName = userName;
     }
 
-    public String getBlogTittle() {
-        return blogTittle;
+    public String getBlogTitle() {
+        return blogTitle;
     }
 
-    public void setBlogTittle(String blogTittle) {
-        this.blogTittle = blogTittle;
+    public void setBlogTitle(String blogTitle) {
+        this.blogTitle = blogTitle;
     }
 
     public String getBlogContext() {
