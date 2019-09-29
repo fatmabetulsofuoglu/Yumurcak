@@ -150,9 +150,5 @@
             android:padding="16dp"
             android:text=" Kayıt Ol "
             android:textColor="#fff" />
-
-
     </LinearLayout>
-
-
 </LinearLayout>
