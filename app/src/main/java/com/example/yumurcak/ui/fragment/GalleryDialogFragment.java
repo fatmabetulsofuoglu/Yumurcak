@@ -1,4 +1,6 @@
 package com.example.yumurcak.ui.fragment;
 
-public class GalleryDialogFragment {
+import androidx.fragment.app.Fragment;
+
+public class GalleryDialogFragment extends Fragment {
 }

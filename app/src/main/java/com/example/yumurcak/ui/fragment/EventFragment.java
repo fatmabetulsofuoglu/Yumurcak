@@ -1,20 +1,25 @@
 package com.example.yumurcak.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.yumurcak.R;
 import com.example.yumurcak.data.api.FirebaseService;
 import com.example.yumurcak.data.model.Event;
 import com.example.yumurcak.ui.adapter.EventAdapter;
 import com.example.yumurcak.utils.IResponseListener;
 import java.util.List;
+
+import static java.security.AccessController.getContext;
 
 public class EventFragment extends Fragment {
     RecyclerView rvEvent;
@@ -37,7 +42,7 @@ public class EventFragment extends Fragment {
 
             @Override
             public void OnError(String error) {
-
+                Toast.makeText(getContext(),error,Toast.LENGTH_LONG);
             }
         });
     }

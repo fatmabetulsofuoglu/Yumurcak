@@ -1,4 +1,6 @@
 package com.example.yumurcak.ui.fragment;
 
-public class CameraDialogFragment {
+import androidx.fragment.app.Fragment;
+
+public class CameraDialogFragment extends Fragment {
 }
