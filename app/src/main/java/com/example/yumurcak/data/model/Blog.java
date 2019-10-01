@@ -7,6 +7,10 @@ public class Blog {
     private String blogTitle;
     private String blogContext;
 
+    public Blog(){
+
+    }
+
     public Blog(String profilePhotoURL, String nameSurname, String userName, String blogTitle, String blogContext) {
         this.profilePhotoURL = profilePhotoURL;
         this.nameSurname = nameSurname;

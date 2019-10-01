@@ -24,8 +24,8 @@ public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.MyViewHolder> 
             super(view);
             tvNameSurname = (TextView) view.findViewById(R.id.tvNameSurname);
             tvUserName = (TextView) view.findViewById(R.id.tvUserName);
-            tvTitleBlog = (TextView) view.findViewById(R.id.tvTitleEvent);
-            tvContextBlog = (TextView) view.findViewById(R.id.tvContextEvent);
+            tvTitleBlog = (TextView) view.findViewById(R.id.tvTitleBlog);
+            tvContextBlog = (TextView) view.findViewById(R.id.tvContextBlog);
             btnUserPhotoURL = (ImageButton) view.findViewById(R.id.btnUserPhotoURL);
         }
     }
