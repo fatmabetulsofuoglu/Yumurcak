@@ -19,6 +19,11 @@ public class User {
     private List<Event> userEvents;
     private List<Blog> userBlogs;
 
+
+    public User(){
+
+    }
+
     public User(String backgroundPhotoURL, String profilePhotoURL, String name, String surname,
                 String genderInfo, String userName, String email, String password, String numberOfFollowers,
                 String numberOfFollowed, String numberOfEvents, String numberofBlogs, List<Event> userEvents,

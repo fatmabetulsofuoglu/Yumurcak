@@ -3,6 +3,7 @@ package com.example.yumurcak.ui.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,16 +17,18 @@ public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.MyViewHolder> 
     private List<Blog> blogList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, year, genre;
+        public TextView tvNameSurname, tvUserName, tvTitleBlog, tvContextBlog;
+        public ImageButton btnUserPhotoURL;
 
         public MyViewHolder(View view) {
             super(view);
-            title = (TextView) view.findViewById(R.id.title);
-            genre = (TextView) view.findViewById(R.id.title);
-            year = (TextView) view.findViewById(R.id.title);
+            tvNameSurname = (TextView) view.findViewById(R.id.tvNameSurname);
+            tvUserName = (TextView) view.findViewById(R.id.tvUserName);
+            tvTitleBlog = (TextView) view.findViewById(R.id.tvTitleEvent);
+            tvContextBlog = (TextView) view.findViewById(R.id.tvContextEvent);
+            btnUserPhotoURL = (ImageButton) view.findViewById(R.id.btnUserPhotoURL);
         }
     }
-
 
     public BlogAdapter(List<Blog> blogList) {
         this.blogList = blogList;
@@ -42,9 +45,9 @@ public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(BlogAdapter.MyViewHolder holder, int position) {
         Blog blog = blogList.get(position);
-        /*holder.title.setText(event);
-        holder.genre.setText(event.getGenre());
-        holder.year.setText(event.getYear());*/
+        holder.tvContextBlog.setText(blog.getBlogContext());
+        holder.tvNameSurname.setText(blog.getNameSurname());
+        holder.tvTitleBlog.setText(blog.getBlogTitle());
     }
 
     @Override

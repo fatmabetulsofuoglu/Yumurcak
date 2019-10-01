@@ -1,5 +1,6 @@
 package com.example.yumurcak.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.yumurcak.R;
+import com.example.yumurcak.data.api.FirebaseService;
 import com.example.yumurcak.ui.fragment.BlogFragment;
 import com.example.yumurcak.ui.fragment.BottomSheetAddFragment;
 import com.example.yumurcak.ui.fragment.EventFragment;
@@ -25,6 +27,8 @@ import com.example.yumurcak.ui.fragment.SaveBlogFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottom;
@@ -32,10 +36,14 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     Toolbar toolbar;
     DrawerLayout drawerLayout;
+    FirebaseService service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        service = new FirebaseService();
+
         setContentView(R.layout.activity_main);
         bottom = findViewById(R.id.bottom);
         navigationView = findViewById(R.id.nav_view);
@@ -58,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new SaveBlogFragment();
                 } else if (id == R.id.navForum) {
                     fragment = new ForumFragment();
+                } else if (id == R.id.navLogout) {
+                    /*firebaseAuth.signOut();
+                        startActivity(new Intent(MainActivity.this, LoginActivity .class));
+                        finish(); */
                 }
                 LoadFragment(fragment);
 

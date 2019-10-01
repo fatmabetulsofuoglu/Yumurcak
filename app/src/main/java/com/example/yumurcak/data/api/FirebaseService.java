@@ -24,6 +24,8 @@ public class FirebaseService {
 
     public void getEventList(IResponseListener<List<Event>> responseListener) {
         List<Event> events = new ArrayList<>();
+        List<Event> blogs = new ArrayList<>();
+
         db.collection("event").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -43,7 +45,7 @@ public class FirebaseService {
 
     public void getBlogList(IResponseListener<List<Blog>> responseListener) {
         List<Blog> blogList = new ArrayList<>();
-        db.collection("event").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("blog").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for (DocumentSnapshot document : task.getResult()) {
