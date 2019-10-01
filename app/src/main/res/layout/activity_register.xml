@@ -40,7 +40,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="@android:color/white"
+            android:background="@color/colorAccent"
             android:hint="Ad"
             android:inputType="textPersonName"
             android:padding="12dp"
@@ -51,7 +51,7 @@
             android:id="@+id/surname_et"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
+            android:background="@color/colorAccent"
             android:hint="Soyad"
             android:layout_margin="8dp"
             android:inputType="textPersonName"
@@ -69,15 +69,13 @@
                 android:id="@+id/radioMother"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Anne"
-                android:checked="true"/>
+                android:text="Anne"/>
 
             <RadioButton
                 android:id="@+id/radioFather"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Baba"
-                android:checked="true"/>
+                android:text="Baba"/>
 
         </RadioGroup>
 
@@ -92,7 +90,7 @@
             android:id="@+id/user_email_register_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
+            android:background="@color/colorAccent"
             android:hint="Email Adresiniz"
             android:layout_margin="8dp"
             android:inputType="textPersonName"
@@ -104,7 +102,7 @@
             android:id="@+id/username_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
+            android:background="@color/colorAccent"
             android:layout_margin="8dp"
             android:hint="Kullanıcı Adı"
             android:inputType="textPersonName"
@@ -119,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/user_email_register_et"
             android:layout_margin="8dp"
-            android:background="@android:color/white"
+            android:background="@color/colorAccent"
             android:hint="Parola"
             android:inputType="textPassword"
             android:padding="12dp"
@@ -132,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/user_password_register_et"
             android:layout_margin="8dp"
-            android:background="@android:color/white"
+            android:background="@color/colorAccent"
             android:ems="10"
             android:hint="Parola Onay"
             android:inputType="textPassword"
@@ -143,10 +141,10 @@
         <Button
             android:id="@+id/button_register"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/user_confirm_email_register_tv"
             android:layout_marginTop="15dp"
-            android:background="@android:color/holo_orange_dark"
+            android:background="@drawable/radius"
             android:padding="16dp"
             android:text=" Kayıt Ol "
             android:textColor="#fff" />
