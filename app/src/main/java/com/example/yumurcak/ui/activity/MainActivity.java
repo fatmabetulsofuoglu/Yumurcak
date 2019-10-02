@@ -67,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
                 } else if (id == R.id.navForum) {
                     fragment = new ForumFragment();
                 } else if (id == R.id.navLogout) {
-                    /*firebaseAuth.signOut();
-                        startActivity(new Intent(MainActivity.this, LoginActivity .class));
-                        finish(); */
+                    service.firebaseAuth.signOut();
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                    finish();
                 }
                 LoadFragment(fragment);
 
