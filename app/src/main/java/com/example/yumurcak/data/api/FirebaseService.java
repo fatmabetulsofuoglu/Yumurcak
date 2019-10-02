@@ -20,7 +20,7 @@ import java.util.List;
 public class FirebaseService {
 
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+    public final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
     public void getEventList(IResponseListener<List<Event>> responseListener) {
         List<Event> events = new ArrayList<>();
