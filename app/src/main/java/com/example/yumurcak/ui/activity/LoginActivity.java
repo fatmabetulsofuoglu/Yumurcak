@@ -55,8 +55,13 @@ public class LoginActivity extends AppCompatActivity {
     private void login(){
         String email=email_et.getText().toString().trim();
         String password=password_et.getText().toString().trim();
-        //TODO: Burda email ve şifreyi kontrol et boş mu diye boş değilse alttakini çalıştır
-//else düştü emülatörde bazen çalıştırmıyodu ama bakalım bi dakka kayıt olmadı ki nasıl login olsun :D :D
+        if(email.isEmpty()){
+            Toast.makeText(this,"Email giriniz.",Toast.LENGTH_LONG).show();
+            return;
+        }else if(password.isEmpty()){
+            Toast.makeText(this,"Şifre giriniz.",Toast.LENGTH_LONG).show();
+            return;
+        }
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -68,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(intent);
                         } else {
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(LoginActivity.this, "Giriş yapılamadı. Email ve şifrenizi kontrol ediniz.",
                                     Toast.LENGTH_SHORT).show();
                         }
 
